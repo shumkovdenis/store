@@ -1,10 +1,10 @@
 package main
 
-import "testing"
+//import "testing"
 
-func TestArraySave(t *testing.T) {
-
-}
+//func TestArraySave(t *testing.T) {
+//
+//}
 
 //func BenchmarkArraySave(b *testing.B) {
 //	for n := 0; n < b.N; n++ {
@@ -13,11 +13,11 @@ func TestArraySave(t *testing.T) {
 //	}
 //}
 
-func BenchmarkArrayCount(b *testing.B) {
-	var store Store = NewArray()
-	FillGenerate(store)
-	for n := 0; n < b.N; n++ {
-		c := store.Count("track", map[string]string{"k1": "v1"})
-		b.Log("get", c)
-	}
-}
+//func BenchmarkArrayCount(b *testing.B) {
+//	var store Store = NewArray()
+//	FillGenerate(store)
+//	for n := 0; n < b.N; n++ {
+//		c := store.Count("track", map[string]string{"k1": "v1"})
+//		b.Log("get", c)
+//	}
+//}

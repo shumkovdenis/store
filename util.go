@@ -19,8 +19,8 @@ func init() {
 func generateProperties(countProperties int) map[string]string {
 	properties := map[string]string{}
 	for i := 0; i < countProperties; i++ {
-		k := fmt.Sprintf("k%d", 1 + rand.Intn(countProperties))
-		v := fmt.Sprintf("v%d", 1 + rand.Intn(countProperties))
+		k := fmt.Sprintf("k%d", 1+rand.Intn(countProperties))
+		v := fmt.Sprintf("v%d", 1+rand.Intn(countProperties))
 		properties[k] = v
 	}
 	return properties
