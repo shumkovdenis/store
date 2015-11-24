@@ -6,12 +6,12 @@ type DB struct {
 	data []*models.Track
 }
 
-func NewDB() *DB {
+func NewDB() (*DB, error) {
 	data := []*models.Track{}
 
 	db := &DB{data}
 
-	return db
+	return db, nil
 }
 
 func (db *DB) Save(track *models.Track) error {
