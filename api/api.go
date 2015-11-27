@@ -3,29 +3,19 @@ package api
 import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/shumkovdenis/store/database/bolt"
 	"github.com/shumkovdenis/store/models"
-	"github.com/shumkovdenis/store/services/statistics"
-	"github.com/shumkovdenis/store/services/store"
-	"log"
+	"github.com/shumkovdenis/store/services"
 	"net/http"
+	"strconv"
 )
 
 type API struct {
-	store *store.Service
-	stats *statistics.Service
+	serviceStore        services.Store
+	serviceSegmentation services.Segmentation
 }
 
-func NewAPI() *API {
-	db, err := bolt.NewDB()
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	store := store.NewService(db)
-	stats := statistics.NewService(db)
-
-	api := &API{store, stats}
+func NewAPI(serviceStore services.Store, serviceSegmentation services.Segmentation) *API {
+	api := &API{serviceStore, serviceSegmentation}
 
 	e := echo.New()
 
@@ -41,12 +31,11 @@ func NewAPI() *API {
 
 func (api *API) track(c *echo.Context) error {
 	track := &models.Track{}
-
 	if err := c.Bind(track); err != nil {
 		return err
 	}
 
-	if err := api.store.Save(track); err != nil {
+	if err := api.serviceStore.SaveTrack(track); err != nil {
 		return err
 	}
 
@@ -54,8 +43,22 @@ func (api *API) track(c *echo.Context) error {
 }
 
 func (api *API) segmentation(c *echo.Context) error {
-	segments, err := api.stats.Segmentation("test", "page", 0, 1449361486)
+	event := c.Query("event")
+	property := c.Query("property")
+	sFrom := c.Query("from")
+	sTo := c.Query("to")
 
+	iFrom, err := strconv.ParseInt(sFrom, 10, 64)
+	if err != nil {
+		return err
+	}
+
+	iTo, err := strconv.ParseInt(sTo, 10, 64)
+	if err != nil {
+		return err
+	}
+
+	segments, err := api.serviceSegmentation.GetSegments(event, property, iFrom, iTo)
 	if err != nil {
 		return err
 	}
