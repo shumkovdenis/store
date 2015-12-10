@@ -1,0 +1,150 @@
+!_TAG_FILE_FORMAT	2
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Joel Stemmer	/stemmertech@gmail.com/
+!_TAG_PROGRAM_NAME	gotags
+!_TAG_PROGRAM_URL	https://github.com/jstemmer/gotags
+!_TAG_PROGRAM_VERSION	1.3.0	/go1.5.1/
+*bolt.DB	database/bolt/database.go	12;"	e	access:public	ctype:DB	language:Go	line:12	type:*bolt.DB
+API	api/api.go	13;"	t	access:public	language:Go	line:13	type:struct
+AndOperator	lexer/token/Tokens.go	20;"	c	access:public	language:Go	line:20	type:string
+BeginLexing	lexer/LexerFactory.go	8;"	f	access:public	language:Go	line:8	signature:(name, input string)	type:*lexer.Lexer
+Count	models/segment.go	5;"	w	access:public	ctype:Segment	language:Go	line:5	type:int
+DB	database/bolt/database.go	11;"	t	access:public	language:Go	line:11	type:struct
+DB	database/database.go	5;"	n	access:public	language:Go	line:5	type:interface
+DB	database/memory/database.go	5;"	t	access:public	language:Go	line:5	type:struct
+Dec	lexer/lexer/Lexer.go	39;"	m	access:public	ctype:Lexer	language:Go	line:39	signature:()
+DoubleQuotes	lexer/token/Tokens.go	12;"	c	access:public	language:Go	line:12	type:string
+EOF	lexer/token/Tokens.go	4;"	c	access:public	language:Go	line:4	type:rune
+Emit	lexer/lexer/Lexer.go	21;"	m	access:public	ctype:Lexer	language:Go	line:21	signature:(tokenType token.TokenType)
+EqualSign	lexer/token/Tokens.go	18;"	c	access:public	language:Go	line:18	type:string
+Errorf	lexer/lexer/Lexer.go	26;"	m	access:public	ctype:Lexer	language:Go	line:26	signature:(format string, args )	type:LexFn
+Event	models/segment.go	4;"	w	access:public	ctype:Segment	language:Go	line:4	type:string
+Event	models/track.go	9;"	w	access:public	ctype:Track	language:Go	line:9	type:string
+GetSegments	services/segmentation.go	4;"	m	access:public	language:Go	line:4	ntype:Segmentation	signature:(event, property string, from, to int64)	type:map[string]int, error
+GetSegments	services/segmentation/service.go	15;"	m	access:public	ctype:Service	language:Go	line:15	signature:(event, property string, from, to int64)	type:map[string]int, error
+GetTracks	database/bolt/database.go	43;"	m	access:public	ctype:DB	language:Go	line:43	signature:(event string, from, to int64)	type:[]*models.Track, error
+GetTracks	database/database.go	7;"	m	access:public	language:Go	line:7	ntype:DB	signature:(event string, from, to int64)	type:[]*models.Track, error
+Inc	lexer/lexer/Lexer.go	43;"	m	access:public	ctype:Lexer	language:Go	line:43	signature:()
+Input	lexer/lexer/Lexer.go	13;"	w	access:public	ctype:Lexer	language:Go	line:13	type:string
+InputToEnd	lexer/lexer/Lexer.go	35;"	m	access:public	ctype:Lexer	language:Go	line:35	signature:()	type:string
+LeftBracket	lexer/token/Tokens.go	9;"	c	access:public	language:Go	line:9	type:string
+LeftParenthesis	lexer/token/Tokens.go	6;"	c	access:public	language:Go	line:6	type:string
+LexBegin	lexer/lexer/LexBegin.go	10;"	f	access:public	language:Go	line:10	signature:(lexer *Lexer)	type:LexFn
+LexFn	lexer/lexer/LexFn.go	3;"	t	access:public	language:Go	line:3	type:func(*Lexer) LexFn
+LexLeftParentthesis	lexer/lexer/LexLeftParenthesis.go	7;"	f	access:public	language:Go	line:7	signature:(lexer *Lexer)	type:LexFn
+Lexer	lexer/lexer/Lexer.go	11;"	t	access:public	language:Go	line:11	type:struct
+LexerErrorMissingLeftParenthesis	lexer/errors/LexerErrors.go	6;"	c	access:public	language:Go	line:6	type:string
+Name	lexer/lexer/Lexer.go	12;"	w	access:public	ctype:Lexer	language:Go	line:12	type:string
+NewAPI	api/api.go	18;"	f	access:public	ctype:API	language:Go	line:18	signature:(serviceStore services.Store, serviceSegmentation services.Segmentation)	type:*API
+NewDB	database/bolt/database.go	15;"	f	access:public	ctype:DB	language:Go	line:15	signature:()	type:*DB, error
+NewDB	database/memory/database.go	9;"	f	access:public	ctype:DB	language:Go	line:9	signature:()	type:*DB, error
+NewService	services/segmentation/service.go	11;"	f	access:public	ctype:Service	language:Go	line:11	signature:(db database.DB)	type:*Service
+NewService	services/store/service.go	15;"	f	access:public	ctype:Service	language:Go	line:15	signature:(db database.DB)	type:*Service
+Next	lexer/lexer/Lexer.go	50;"	m	access:public	ctype:Lexer	language:Go	line:50	signature:()	type:rune
+Pos	lexer/lexer/Lexer.go	17;"	w	access:public	ctype:Lexer	language:Go	line:17	type:int
+Properties	models/track.go	10;"	w	access:public	ctype:Track	language:Go	line:10	type:map[string]string
+PropertiesData	lexer/token/Tokens.go	16;"	c	access:public	language:Go	line:16	type:string
+PropertyTime	models/track.go	4;"	c	access:public	language:Go	line:4
+RightBracket	lexer/token/Tokens.go	10;"	c	access:public	language:Go	line:10	type:string
+RightParenthesis	lexer/token/Tokens.go	7;"	c	access:public	language:Go	line:7	type:string
+Save	database/memory/database.go	17;"	m	access:public	ctype:DB	language:Go	line:17	signature:(track *models.Track)	type:error
+SaveTrack	database/bolt/database.go	24;"	m	access:public	ctype:DB	language:Go	line:24	signature:(track *models.Track)	type:error
+SaveTrack	database/database.go	6;"	m	access:public	language:Go	line:6	ntype:DB	signature:(track *models.Track)	type:error
+SaveTrack	services/store.go	6;"	m	access:public	language:Go	line:6	ntype:Store	signature:(track *models.Track)	type:error
+SaveTrack	services/store/service.go	19;"	m	access:public	ctype:Service	language:Go	line:19	signature:(track *models.Track)	type:error
+Segment	models/segment.go	3;"	t	access:public	language:Go	line:3	type:struct
+Segmentation	services/segmentation.go	3;"	n	access:public	language:Go	line:3	type:interface
+Service	services/segmentation/service.go	7;"	t	access:public	language:Go	line:7	type:struct
+Service	services/store/service.go	11;"	t	access:public	language:Go	line:11	type:struct
+SkipWhitespace	lexer/lexer/Lexer.go	63;"	m	access:public	ctype:Lexer	language:Go	line:63	signature:()
+Start	lexer/lexer/Lexer.go	16;"	w	access:public	ctype:Lexer	language:Go	line:16	type:int
+State	lexer/lexer/Lexer.go	15;"	w	access:public	ctype:Lexer	language:Go	line:15	type:LexFn
+Store	services/store.go	5;"	n	access:public	language:Go	line:5	type:interface
+String	lexer/token/Token.go	12;"	m	access:public	ctype:Token	language:Go	line:12	signature:()	type:string
+StringType	lexer/token/Tokens.go	14;"	c	access:public	language:Go	line:14	type:string
+Time	models/track.go	8;"	w	access:public	ctype:Track	language:Go	line:8	type:int64
+Token	lexer/token/Token.go	7;"	t	access:public	language:Go	line:7	type:struct
+TokenAndOperator	lexer/token/TokenType.go	23;"	c	access:public	language:Go	line:23
+TokenDoubleQuotes	lexer/token/TokenType.go	15;"	c	access:public	language:Go	line:15
+TokenEOF	lexer/token/TokenType.go	7;"	c	access:public	language:Go	line:7
+TokenEqualSign	lexer/token/TokenType.go	21;"	c	access:public	language:Go	line:21
+TokenError	lexer/token/TokenType.go	6;"	c	access:public	language:Go	line:6	type:TokenType
+TokenLeftBracket	lexer/token/TokenType.go	12;"	c	access:public	language:Go	line:12
+TokenLeftParenthesis	lexer/token/TokenType.go	9;"	c	access:public	language:Go	line:9
+TokenPropertiesData	lexer/token/TokenType.go	19;"	c	access:public	language:Go	line:19
+TokenRightBracket	lexer/token/TokenType.go	13;"	c	access:public	language:Go	line:13
+TokenRightParenthesis	lexer/token/TokenType.go	10;"	c	access:public	language:Go	line:10
+TokenStringType	lexer/token/TokenType.go	17;"	c	access:public	language:Go	line:17
+TokenType	lexer/token/TokenType.go	3;"	t	access:public	language:Go	line:3	type:int
+Tokens	lexer/lexer/Lexer.go	14;"	w	access:public	ctype:Lexer	language:Go	line:14	type:chan token.Token
+Track	models/track.go	7;"	t	access:public	language:Go	line:7	type:struct
+Type	lexer/token/Token.go	8;"	w	access:public	ctype:Token	language:Go	line:8	type:TokenType
+Value	lexer/token/Token.go	9;"	w	access:public	ctype:Token	language:Go	line:9	type:string
+Width	lexer/lexer/Lexer.go	18;"	w	access:public	ctype:Lexer	language:Go	line:18	type:int
+api	api/api.go	1;"	p	language:Go	line:1
+bolt	database/bolt/database.go	1;"	p	language:Go	line:1
+bytes	database/bolt/database.go	4;"	i	language:Go	line:4
+data	database/memory/database.go	6;"	w	access:private	ctype:DB	language:Go	line:6	type:[]*models.Track
+database	database/database.go	1;"	p	language:Go	line:1
+db	services/segmentation/service.go	8;"	w	access:private	ctype:Service	language:Go	line:8	type:database.DB
+db	services/store/service.go	12;"	w	access:private	ctype:Service	language:Go	line:12	type:database.DB
+encoding/json	database/bolt/database.go	5;"	i	language:Go	line:5
+errors	lexer/errors/LexerErrors.go	1;"	p	language:Go	line:1
+fmt	lexer/lexer/Lexer.go	4;"	i	language:Go	line:4
+fmt	lexer/token/Token.go	4;"	i	language:Go	line:4
+fmt	services/store/service.go	4;"	i	language:Go	line:4
+formatTime	database/bolt/database.go	65;"	f	access:private	language:Go	line:65	signature:(timestamp int64)	type:string
+github.com/boltdb/bolt	database/bolt/database.go	6;"	i	language:Go	line:6
+github.com/labstack/echo	api/api.go	7;"	i	language:Go	line:7
+github.com/labstack/echo/middleware	api/api.go	8;"	i	language:Go	line:8
+github.com/shumkovdenis/store/api	main.go	6;"	i	language:Go	line:6
+github.com/shumkovdenis/store/database	services/segmentation/service.go	4;"	i	language:Go	line:4
+github.com/shumkovdenis/store/database	services/store/service.go	5;"	i	language:Go	line:5
+github.com/shumkovdenis/store/database/bolt	main.go	7;"	i	language:Go	line:7
+github.com/shumkovdenis/store/lexer/errors	lexer/lexer/LexBegin.go	6;"	i	language:Go	line:6
+github.com/shumkovdenis/store/lexer/lexer	lexer/LexerFactory.go	4;"	i	language:Go	line:4
+github.com/shumkovdenis/store/lexer/token	lexer/LexerFactory.go	5;"	i	language:Go	line:5
+github.com/shumkovdenis/store/lexer/token	lexer/lexer/LexBegin.go	7;"	i	language:Go	line:7
+github.com/shumkovdenis/store/lexer/token	lexer/lexer/LexLeftParenthesis.go	4;"	i	language:Go	line:4
+github.com/shumkovdenis/store/lexer/token	lexer/lexer/Lexer.go	8;"	i	language:Go	line:8
+github.com/shumkovdenis/store/models	api/api.go	9;"	i	language:Go	line:9
+github.com/shumkovdenis/store/models	database/bolt/database.go	7;"	i	language:Go	line:7
+github.com/shumkovdenis/store/models	database/database.go	3;"	i	language:Go	line:3
+github.com/shumkovdenis/store/models	database/memory/database.go	3;"	i	language:Go	line:3
+github.com/shumkovdenis/store/models	services/store.go	3;"	i	language:Go	line:3
+github.com/shumkovdenis/store/models	services/store/service.go	6;"	i	language:Go	line:6
+github.com/shumkovdenis/store/services	api/api.go	10;"	i	language:Go	line:10
+github.com/shumkovdenis/store/services/segmentation	main.go	8;"	i	language:Go	line:8
+github.com/shumkovdenis/store/services/store	main.go	9;"	i	language:Go	line:9
+lexer	lexer/LexerFactory.go	1;"	p	language:Go	line:1
+lexer	lexer/lexer/LexBegin.go	1;"	p	language:Go	line:1
+lexer	lexer/lexer/LexFn.go	1;"	p	language:Go	line:1
+lexer	lexer/lexer/LexLeftParenthesis.go	1;"	p	language:Go	line:1
+lexer	lexer/lexer/Lexer.go	1;"	p	language:Go	line:1
+log	main.go	4;"	i	language:Go	line:4
+main	main.go	12;"	f	access:private	language:Go	line:12	signature:()
+main	main.go	1;"	p	language:Go	line:1
+main	main_test.go	1;"	p	language:Go	line:1
+memory	database/memory/database.go	1;"	p	language:Go	line:1
+models	models/segment.go	1;"	p	language:Go	line:1
+models	models/track.go	1;"	p	language:Go	line:1
+net/http	api/api.go	4;"	i	language:Go	line:4
+processTime	services/store/service.go	26;"	f	access:private	language:Go	line:26	signature:(track *models.Track)	type:error
+segmentation	api/api.go	46;"	m	access:private	ctype:API	language:Go	line:46	signature:(c *echo.Context)	type:error
+segmentation	services/segmentation/service.go	1;"	p	language:Go	line:1
+serviceSegmentation	api/api.go	15;"	w	access:private	ctype:API	language:Go	line:15	type:services.Segmentation
+serviceStore	api/api.go	14;"	w	access:private	ctype:API	language:Go	line:14	type:services.Store
+services	services/segmentation.go	1;"	p	language:Go	line:1
+services	services/store.go	1;"	p	language:Go	line:1
+store	services/store/service.go	1;"	p	language:Go	line:1
+strconv	api/api.go	5;"	i	language:Go	line:5
+strconv	services/store/service.go	7;"	i	language:Go	line:7
+strings	lexer/lexer/LexBegin.go	4;"	i	language:Go	line:4
+time	database/bolt/database.go	8;"	i	language:Go	line:8
+time	services/store/service.go	8;"	i	language:Go	line:8
+token	lexer/token/Token.go	1;"	p	language:Go	line:1
+token	lexer/token/TokenType.go	1;"	p	language:Go	line:1
+token	lexer/token/Tokens.go	1;"	p	language:Go	line:1
+track	api/api.go	33;"	m	access:private	ctype:API	language:Go	line:33	signature:(c *echo.Context)	type:error
+unicode	lexer/lexer/Lexer.go	5;"	i	language:Go	line:5
+unicode/utf8	lexer/lexer/Lexer.go	6;"	i	language:Go	line:6

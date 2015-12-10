@@ -1,11 +1,12 @@
 package main
 
 import (
+	"log"
+
 	"github.com/shumkovdenis/store/api"
 	"github.com/shumkovdenis/store/database/bolt"
 	"github.com/shumkovdenis/store/services/segmentation"
 	"github.com/shumkovdenis/store/services/store"
-	"log"
 )
 
 func main() {

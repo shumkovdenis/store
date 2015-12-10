@@ -1,12 +1,13 @@
 package api
 
 import (
+	"net/http"
+	"strconv"
+
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/shumkovdenis/store/models"
 	"github.com/shumkovdenis/store/services"
-	"net/http"
-	"strconv"
 )
 
 type API struct {
