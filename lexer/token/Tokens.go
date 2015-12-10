@@ -3,19 +3,19 @@ package token
 const (
 	EOF rune = 0
 
-	LeftParenthesis  string = "("
-	RightParenthesis string = ")"
+	StartConditions string = "("
+	EndConditions   string = ")"
 
-	LeftBracket  string = "["
-	RightBracket string = "]"
+	String string = "string("
+
+	Properties string = "properties"
+
+	StartKey string = "[\""
+	EndKey   string = "\"]"
 
 	DoubleQuotes string = "\""
 
-	TypeString string = "string"
-
-	ListProperties string = "properties"
-
 	EqualSign string = "=="
 
-	OperatorAnd string = "and"
+	And string = "and"
 )

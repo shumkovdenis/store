@@ -36,6 +36,10 @@ func (lexer *Lexer) InputToEnd() string {
 	return lexer.Input[lexer.Pos:]
 }
 
+func (this *Lexer) IsEOF() bool {
+	return this.Pos >= len(this.Input)
+}
+
 func (lexer *Lexer) Dec() {
 	lexer.Pos--
 }

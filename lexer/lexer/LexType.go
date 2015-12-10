@@ -8,9 +8,8 @@ import (
 )
 
 func LexType(lexer *Lexer) LexFn {
-	if strings.HasPrefix(lexer.InputToEnd(), token.TypeString) {
-		lexer.Emit(token.TokenTypeString)
-		return LexList
+	if strings.HasPrefix(lexer.InputToEnd(), token.String) {
+		return LexString
 	} else {
 		return lexer.Errorf(errors.LexerErrorMissingType)
 	}

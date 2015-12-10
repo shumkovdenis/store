@@ -10,9 +10,9 @@ import (
 func LexBegin(lexer *Lexer) LexFn {
 	lexer.SkipWhitespace()
 
-	if strings.HasPrefix(lexer.InputToEnd(), token.LeftParenthesis) {
-		return LexLeftParenthesisConditions
+	if strings.HasPrefix(lexer.InputToEnd(), token.StartConditions) {
+		return LexStartConditions
 	} else {
-		return lexer.Errorf(errors.LexerErrorMissingLeftParenthesis)
+		return lexer.Errorf(errors.LexerErrorMissingStartConditions)
 	}
 }

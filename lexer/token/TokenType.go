@@ -6,29 +6,22 @@ const (
 	TokenError TokenType = iota
 	TokenEOF
 
-	TokenLeftParenthesisConditions
-	TokenRightParenthesisConditions
+	TokenStartConditions
+	TokenEndConditions
 
-	TokenTypeString
+	TokenString
 
-	TokenLeftParenthesisArgument
-	TokenRightParenthesisArgument
+	TokenProperties
 
-	TokenListProperties
+	TokenStartKey
+	TokenEndKey
+	TokenKey
 
-	TokenLeftBracketKey
-	TokenRightBracketKey
-
-	TokenLeftDoubleQuotesKey
-	TokenRightDoubleQuotesKey
+	TokenStartValue
+	TokenEndValue
+	TokenValue
 
 	TokenEqualSign
 
-	TokenLeftDoubleQuotesValue
-	TokenRightDoubleQuotesValue
-
-	TokenOperatorAnd
-
-	TokenKey
-	TokenValue
+	TokenAnd
 )

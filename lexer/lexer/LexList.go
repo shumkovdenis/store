@@ -8,10 +8,9 @@ import (
 )
 
 func LexList(lexer *Lexer) LexFn {
-	if strings.HasPrefix(lexer.InputToEnd(), token.ListProperties) {
-		lexer.Emit(token.TokenListProperties)
-		return nil
+	if strings.HasPrefix(lexer.InputToEnd(), token.Properties) {
+		return LexProperties
 	} else {
-		return lexer.Errorf(errors.LexerErrorMissingProperties)
+		return lexer.Errorf(errors.LexerErrorMissingList)
 	}
 }

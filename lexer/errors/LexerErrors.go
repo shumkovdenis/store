@@ -1,10 +1,10 @@
 package errors
 
 const (
-	// LEXER_ERROR_UNEXPECTED_EOF        string = "Unexpected end of file"
-	// LEXER_ERROR_MISSING_RIGHT_BRACKET string = "Missing a closing section bracket"
-	LexerErrorMissingLeftParenthesis  string = "Missing a opening parenthesis"
-	LexerErrorMissingRightParenthesis string = "Missing a closing parenthesis"
-	LexerErrorMissingType             string = "Missing type"
-	LexerErrorMissingProperties       string = "Missing properties"
+	LexerErrorMissingStartConditions string = "Missing start conditions"
+	LexerErrorMissingEndConditions   string = "Missing end conditions"
+	LexerErrorMissingType            string = "Missing type"
+	LexerErrorMissingList            string = "Missing list"
+	LexerErrorMissingKey             string = "Missing key"
+	LexerErrorMissingValue           string = "Missing value"
 )
